@@ -1,0 +1,41 @@
+
+{
+    "data": [
+    {
+        "id": 1,
+        "imag":"assets/food/barbecue.jpg",
+
+        "nom": "pasta",
+        "price": "12.59£",
+        "description":"italien pasta with cheese",
+        "rating":"5"
+
+    },
+    {
+        "id": 2,
+        "imag":"assets/food/pasta.jpg",
+        "nom": "spaghetti",
+        "price":"10.59£",
+        "description":"spaghetti italien with sauce tomato",
+        "rating":"2"
+    },
+    {
+        "id": 3,
+        "imag":"assets/food/salmon.jpg",
+        "nom": "barbecue",
+        "price": "20£",
+        "description":"frech meat cooked on wood fire",
+        "rating":"5"
+    },
+    {
+        "id": 4,
+        "imag":"assets/food/spaghetti.jpg",
+        "nom": "salmon",
+        "price": "25£",
+        "description":"frech from meditteranian",
+        "rating":"3"
+    }
+   
+]
+} 
+

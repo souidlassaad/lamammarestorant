@@ -1,0 +1,68 @@
+
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+.footer{
+position: relative;
+background:#13131a;
+text-align: center;
+
+}
+
+
+    
+
+.footer .share i{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    color:#fff;
+   
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+.footer .share i:hover{
+    background-color: #d3ad7f;
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+
+.footer .links a{
+    padding:.1rem 0.1rem;
+    color:#fff;
+    border:.1rem solid rgba(255,255,255,.3);
+    font-size: 2rem;
+}
+
+.footer .links a:hover{
+    background:#d3ad7f;
+}
+
+
+.footer .credit{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding:1.5rem;
+}
+
+.footer .credit span{
+    color:#d3ad7f;
+}
+
+
+.paybutton{
+    float: right;
+}

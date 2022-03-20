@@ -1,0 +1,105 @@
+
+<div class="container" >
+
+ 
+      <div class="grid" >
+ 
+    <p-card   class="col" subheader="{{dish.nom}}" *ngFor="let dish of dishs" [style]="{width: '350px'}" styleClass="box shadow-8" >
+        <h1>{{dish.rating}}</h1>
+        <ng-template pTemplate="header">
+            <img alt="Card" class="image" src="{{dish.imag}}">
+        </ng-template>
+        <p>{{dish.description}}</p>
+          <h3>{{dish.price}}</h3>
+        <ng-template pTemplate="footer">
+            <p-button label="Like" icon="pi pi-check" (onClick)="showDialog()"></p-button>
+            <p-button label="unlike" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+        </ng-template>
+    </p-card>
+
+  <!--
+       <p-card header="Salmon" class="col" subheader="Salmon" [style]="{width: '360px'}" styleClass="box shadow-8">
+        <ng-template pTemplate="header">
+            <img alt="Card" class="image" src="assets/food/salmon.jpg">
+        </ng-template>
+        <p>llllll</p>
+        <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+        </ng-template>
+    </p-card>
+
+    <p-card header="Salmon" class="col" subheader="Salmon" [style]="{width: '360px'}" styleClass="box shadow-8">
+        <ng-template pTemplate="header">
+            <img alt="Card" class="image" src="assets/food/salmon.jpg">
+        </ng-template>
+        <p>llllll</p>
+        <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+        </ng-template>
+    </p-card>
+
+    <p-card header="spaghetti" class="col" subheader="spaghetti" [style]="{width: '360px'}" styleClass="box shadow-8">
+        <ng-template pTemplate="header">
+            <img alt="Card" class="image" src="assets/food/spaghetti.jpg">
+        </ng-template>
+        <p>llllll</p>
+        <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+        </ng-template>
+    </p-card>
+
+    <p-card header="Advanced Card" class="col" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="box shadow-8">
+        <ng-template pTemplate="header">
+            <img alt="Card" class="image" src="assets/food/barbecue.jpg">
+        </ng-template>
+        <p>llllll</p>
+        <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+        </ng-template>
+    </p-card>
+
+    <p-card header="Advanced Card" class="col" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="box shadow-8 ">
+        <ng-template pTemplate="header">
+            <img alt="Card" class="image" src="assets/food/pasta.jpg">
+        </ng-template>
+        <p>llllll</p>
+        <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+        </ng-template>
+    </p-card>
+    <p-card header="Advanced Card" class="col" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="box shadow-8 ">
+        <ng-template pTemplate="header">
+            <img alt="Card" class="image" src="assets/food/pasta.jpg">
+        </ng-template>
+        <p>llllll</p>
+        <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+        </ng-template>
+    </p-card>
+
+    <p-card header="Advanced Card" class="col" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="box shadow-8 ">
+        <ng-template pTemplate="header">
+            <img alt="Card" class="image" src="assets/food/pasta.jpg">
+        </ng-template>
+        <p>llllll</p>
+        <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+        </ng-template>
+    </p-card>
+-->
+
+</div>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/bootstrap4-dark-purple/theme.css";
+@import "primeflex/primeflex.css";
+html,body {
+    height: 100%; 
+    background-color: #fff;
+    padding: 0 ;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    
+      //  background-image: url('assets/food/background.jpg');
+       // background-repeat: no-repeat;
+       // background-attachment: fixed;  
+       // background-size: cover;
+      
+   
+}
+
+#myVideo{
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+      
+}
+.container{
+    margin: 2%;
+    display: flex;
+}
+
