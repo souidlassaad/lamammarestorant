@@ -1,0 +1,29 @@
+
+    <div class="text-900 text-3xl text-center font-semibold mb-3">SIGNIN</div>
+        <p-card [style]="{width: '30%', height: '320px'}" class="flex align-items-center justify-content-center mb-3">
+           
+           
+            <div class=" flex align-items-center justify-content-center">
+                <div class="p-fluid">
+                    <div class="field">
+                        <label for="username">Username</label>
+                        <input pInputText id="username" type="text" />
+                    </div>
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input pInputText id="password" type="password" />
+                    </div>
+                 
+
+                   
+                </div>
+            </div>
+                 
+            <div class="b">
+                <button pButton type="button" label="Login" class="p-button-rounded " icon="pi pi-sign-in"></button>
+            </div><br>
+            <span class="text-600 font-medium">You don't have an account?</span><span  class="text-800 text-1x2 font-medium"> <a routerLink="/register"> SignUp</a></span>
+            
+        </p-card>
+        
+  

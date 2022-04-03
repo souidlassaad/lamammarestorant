@@ -1,1 +1,44 @@
-<p>register works!</p>
+<div class="grid">
+
+    <div class="col-12 md:col-4">
+    
+       
+    </div>
+        <div class="col-12 md:col-4 mb-2">
+            <div class="text-900 text-3xl text-center font-semibold mb-3">SIGNUP</div>
+            <p-card [style]="{width: '100%', height: '410px'}">
+               
+               
+                <div class=" flex align-items-center justify-content-center">
+                    <div class="p-fluid">
+                        <div class="field">
+                            <label for="username">Username</label>
+                            <input pInputText id="username" type="text" />
+                        </div>
+                        <div class="field">
+                            <label for="email">email</label>
+                            <input pInputText id="email" type="email" />
+                        </div>
+                        
+                        <div class="field">
+                            <label for="password">Password</label>
+                            <input pInputText id="password" type="password" />
+                        </div>
+                        
+                     
+    
+                    </div>  
+                     </div>
+                <div class="b">
+                    <button pButton type="button" label="Save" class="p-button-rounded " icon="pi pi-save"></button>
+                </div><br>
+                <span class="text-600 font-medium">You already have an account?</span><span  class="text-800 text-1x2 font-medium"><a routerLink="/login"> SignIn</a></span>
+                
+            </p-card>
+        </div>
+    
+        <div class="col-12 md:col-4">
+    
+    </div>
+    
+    </div>

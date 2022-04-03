@@ -32,7 +32,8 @@ import {StyleClassModule} from 'primeng/styleclass';
 import { BlogComponent } from './blog/blog.component';
 import { RegisterComponent } from './register/register.component';
 import { DishesService } from './services/dishes.sevice';
-
+import {RadioButtonModule} from 'primeng/radiobutton';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -46,14 +47,15 @@ import { DishesService } from './services/dishes.sevice';
     MenuComponent,
     DetailComponent,
     BlogComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
    
     AppRoutingModule,AccordionModule,BrowserAnimationsModule,ToolbarModule,MenubarModule,ButtonModule,InputTextModule,
     CardModule,ImageModule,DividerModule,CarouselModule,DialogModule,GMapModule,ToastModule,CheckboxModule,
-    FormsModule,StyleClassModule,PasswordModule
+    FormsModule,StyleClassModule,PasswordModule,RadioButtonModule
 
    
    

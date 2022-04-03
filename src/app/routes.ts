@@ -8,6 +8,7 @@ import { DetailComponent } from "./detail/detail.component";
 import { BlogComponent } from "./blog/blog.component";
 import { AppComponent } from "./app.component";
 import { RegisterComponent } from "./register/register.component";
+import { LoginComponent } from "./login/login.component";
 
 
 export const routes: Routes = [
@@ -21,6 +22,7 @@ export const routes: Routes = [
     {path:"detail",component:DetailComponent},
     {path:"blog",component:BlogComponent},
     {path:"register",component:RegisterComponent},
+    {path:"login",component:LoginComponent},
     {path:"",redirectTo:"/home",pathMatch:"full"}
    
 
