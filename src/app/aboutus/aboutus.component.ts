@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthStateService } from '../shared/auth-state.service';
+import { TokenService } from '../shared/token.service';
 
 @Component({
   selector: 'app-aboutus',
@@ -6,12 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aboutus.component.scss']
 })
 export class AboutusComponent implements OnInit {
-
-  constructor() { }
-  display : boolean = false;
-  ngOnInit(): void {
+  isSignedIn!: boolean;
+  constructor(
+    private auth: AuthStateService,
+    public router: Router,
+    public token: TokenService
+  ) {}
+  ngOnInit() {
+    this.auth.userAuthState.subscribe((val) => {
+      this.isSignedIn = val;
+    });
   }
-  showDialog() {
-    this.display = true;
-}
+  // Signout
+  signOut() {
+    this.auth.setAuthState(false);
+    this.token.removeToken();
+    this.router.navigate(['login']);
+  }
 }

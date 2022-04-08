@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'LaMammaResto';
 
   ngOnInit():void{
-    var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    /*var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
     
     // Change the icons inside the button based on previous settings
@@ -48,6 +48,6 @@ export class AppComponent {
             }
         }
         
-    }); 
+    }); */
   }
 }

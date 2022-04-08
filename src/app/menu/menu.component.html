@@ -1,22 +1,82 @@
+<br>
 
-<div class="container" >
+<div>
+    <p-dialog header="Title" [(visible)]="dishesDialog" [modal]="true"  [draggable]="false" [resizable]="false" [style]="{width: '50vw'}">
+       
+       
+      <ng-template pTemplate="content"  (ngsubmit)="insertData()"> 
+        
+        
+        
+            <div class="p-grid">
+        <div class="p-col-12">
+           
+        <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col">
+                <label for="nom">nom</label>
+                <input id="nom"  name="dt" [(ngModel)]="dish.nom" type="text" pInputText required autofocus/> 
+                <small class="p-error" *ngIf="submitted && !dish.nom">nom is required.</small>
+            </div>
+            <div class="p-field p-col">
+                <label for="description">description</label>
+                <input id="description"   name="an" [(ngModel)]="dish.description" type="text" pInputText required autofocus/> 
+                <small class="p-error" *ngIf="submitted && !dish.description">descriptin is required.</small>
+            </div>
+        </div>
+        
+        <div class="p-fluid p-formgrid p-grid">
+            <div class="p-field p-col">
+                <label for="rating">rating</label>
+                <input id="rating"   name="an" [(ngModel)]="dish.rating" type="text" pInputText required autofocus/> 
+                <small class="p-error" *ngIf="submitted && !dish.rating">rating is required.</small>
+            </div>
+            <div class="p-field p-col">
+                <label for="imag">imag </label>
+                <input id="imag"   name="an" [(ngModel)]="dish.imag" type="text" pInputText required autofocus/> 
+                <small class="p-error" *ngIf="submitted && !dish.imag">image is required.</small>
+               
+            </div>
+            <div class="p-field p-col">
+                <label for="price">price </label>
+                <input id="price"   name="an" [(ngModel)]="dish.price" type="text" pInputText required autofocus/> 
+                <small class="p-error" *ngIf="submitted && !dish.price">price is required.</small>
+               
+            </div>
+        </div>
+        
+      
+</div>
+            </div>
+        </ng-template>
+       
+         <ng-template pTemplate="footer">
+                <p-button  label="Add" icon="pi pi-check" styleClass="p-button-text"  (click)="insertData()"></p-button>
+                <p-button icon="pi pi-desktop" label="Cancel" styleClass="p-button-text" (click)="hideDialog()"></p-button>
+            </ng-template>
+    </p-dialog>
+    <button pButton type="button" label="New Produit" icon="pi pi-save" class="p-button-rounded ml-5 " (click)="showDialog()"></button>
+</div>
 
- 
-      <div class="grid" >
- 
-    <p-card   class="col" subheader="{{dish.nom}}" *ngFor="let dish of dishs" [style]="{width: '350px'}" styleClass="box shadow-8" >
+
+<div class="container">
+   
+
+<div class="grid" >
+     
+    <p-card subheader="{{dish.nom}}"  [style]="{width: '350px'}" styleClass="box shadow-8" >
         <h1>{{dish.rating}}</h1>
         <ng-template pTemplate="header">
-            <img alt="Card" class="image" src="{{dish.imag}}">
+           {{dish.imag}}
         </ng-template>
         <p>{{dish.description}}</p>
           <h3>{{dish.price}}</h3>
         <ng-template pTemplate="footer">
-            <p-button label="Like" icon="pi pi-check" (onClick)="showDialog()"></p-button>
+            <p-button label="Like" icon="pi pi-check"></p-button>
             <p-button label="unlike" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
         </ng-template>
     </p-card>
 
+   
   <!--
        <p-card header="Salmon" class="col" subheader="Salmon" [style]="{width: '360px'}" styleClass="box shadow-8">
         <ng-template pTemplate="header">

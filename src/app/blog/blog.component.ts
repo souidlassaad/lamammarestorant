@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from '../shared/auth.service';
+export class User {
+  name: any;
+  email: any;
+}
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
-  styles:[`
+ /* styles:[`
     :host ::ng-deep .p-password input {
     width: 100%;
     padding:1rem;
@@ -21,19 +25,21 @@ import { Component, OnInit } from '@angular/core';
       margin-right: 1rem;
       color: var(--primary-color) !important;
     }
-  `]
+  `]*/
 })
 export class BlogComponent implements OnInit {
 
-  valCheck: string[] = ['remember'];
-
-  password: string;
+  UserProfile!: User;
+  constructor(public authService: AuthService) {
+    this.authService.profileUser().subscribe((data: any) => {
+      this.UserProfile = data;
+    });
+  }
+ 
+ 
   
- 
- 
-  constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

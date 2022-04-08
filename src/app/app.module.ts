@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -14,7 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 
-
+import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import { MenuComponent } from './menu/menu.component';
@@ -34,6 +34,9 @@ import { RegisterComponent } from './register/register.component';
 import { DishesService } from './services/dishes.sevice';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import { LoginComponent } from './login/login.component';
+import { HttpClient, HttpClientModule, HttpHandler, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './shared/auth.interceptor';
+import { AuthService } from './shared/auth.service';
 
 
 @NgModule({
@@ -52,15 +55,23 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
-   
+   HttpClientModule,
     AppRoutingModule,AccordionModule,BrowserAnimationsModule,ToolbarModule,MenubarModule,ButtonModule,InputTextModule,
     CardModule,ImageModule,DividerModule,CarouselModule,DialogModule,GMapModule,ToastModule,CheckboxModule,
-    FormsModule,StyleClassModule,PasswordModule,RadioButtonModule
+    FormsModule,StyleClassModule,PasswordModule,RadioButtonModule,ReactiveFormsModule,TableModule
 
    
    
   ],
-  providers: [DishesService],
+  providers: [
+    {
+    
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true,
+    
+   
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
